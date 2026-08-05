@@ -1,129 +1,40 @@
 # 🚀 End-to-End Performance Reporting Automation System
 
-An end-to-end reporting automation system designed to streamline organizational performance reporting workflows, from data collection and document management to automated notifications, calendar synchronization, and interactive dashboard reporting.
+Sistem automasi pelaporan kinerja end-to-end yang dibangun untuk menyederhanakan proses pelaporan organisasi, mulai dari pengumpulan data, pengelolaan dokumen, sinkronisasi Google Calendar, pengiriman email konfirmasi, hingga visualisasi dashboard monitoring.
 
-This project was independently developed during my internship as **Administration & Company Report Intern** at **First Step Journey** to help reduce manual administrative work, standardize reporting processes, and improve reporting visibility across multiple divisions.
+Project ini dikembangkan secara **mandiri** selama menjalani internship sebagai **Administration & Company Report Intern** di **First Step Journey** sebagai solusi untuk mengurangi proses administrasi manual, menstandarkan alur pelaporan, serta meningkatkan visibilitas performa pelaporan antar divisi.
 
-> **🚧 Project Status**
+> 🚧 **Status Project**
 >
-> This project is currently **under active development**.
+> Project ini masih dalam tahap pengembangan.
 >
-> The existing version already automates the end-to-end reporting workflow and includes an interactive monitoring dashboard. Additional dashboards, reporting metrics, and analytical features are currently being developed to provide more comprehensive business insights.
+> Versi saat ini telah mencakup automasi alur pelaporan end-to-end beserta dashboard monitoring utama. Pengembangan masih terus dilakukan dengan menambahkan dashboard yang lebih detail, metrik pelaporan tambahan, serta penyempurnaan fitur monitoring.
 
 ---
 
 # 🏢 Business Context
 
-Managing organizational performance reports across multiple divisions can become increasingly challenging as reporting frequency grows.
+Pelaporan kinerja organisasi yang dilakukan secara berkala melibatkan berbagai divisi, dokumen pendukung, serta aktivitas monitoring yang harus dikelola secara konsisten.
 
-Previously, reports were submitted manually through various communication channels, making it difficult to:
+Sebelum sistem ini dikembangkan, proses pelaporan masih melibatkan banyak aktivitas manual, seperti pengumpulan laporan, pengelolaan dokumen, penjadwalan agenda, pengiriman konfirmasi kepada PIC, hingga proses monitoring yang dilakukan secara terpisah.
 
-- monitor submission status,
-- organize supporting documents,
-- schedule reporting activities,
-- notify report owners,
-- and track overall reporting performance.
+Kondisi tersebut menyebabkan proses administrasi menjadi lebih repetitif, sementara monitoring pelaporan antar divisi belum terpusat dalam satu alur kerja yang terintegrasi.
 
-These manual processes required repetitive administrative work and reduced reporting visibility for management.
-
-To address these challenges, an integrated automation workflow was developed using Google Workspace to centralize the reporting process into a single automated system.
+Untuk membantu mengatasi permasalahan tersebut, dikembangkan sebuah sistem automasi berbasis Google Workspace yang menghubungkan seluruh proses pelaporan ke dalam satu workflow end-to-end.
 
 ---
 
 # 🎯 Project Objectives
 
-This project aims to:
+Project ini bertujuan untuk:
 
-- Standardize organizational performance reporting workflows.
-- Automate report submission through Google Forms.
-- Automatically synchronize reporting schedules with Google Calendar.
-- Send confirmation emails after successful submissions.
-- Organize uploaded files into structured Google Drive folders.
-- Build an interactive dashboard for monitoring reporting activities.
-- Reduce repetitive administrative tasks through workflow automation.
-
----
-
-# ✨ Key Features
-
-## 📄 Google Form Reporting
-
-A standardized reporting form used by multiple divisions to submit periodic performance reports.
-
-<p align="center">
-<img src="assets/google-form.png" width="100%">
-</p>
-
----
-
-## 📅 Google Calendar Integration
-
-Automatically creates calendar events for reports containing scheduled activities, ensuring important events are visible without manual calendar updates.
-
-<p align="center">
-<img src="assets/calendar-preview.png" width="100%">
-</p>
-
----
-
-## 📧 Automated Email Confirmation
-
-Automatically sends confirmation emails to the assigned PIC after each successful report submission.
-
-<p align="center">
-<img src="assets/email-confirmation.png" width="100%">
-</p>
-
----
-
-## 📂 Automated Google Drive Organization
-
-Uploaded files are automatically renamed and organized into a standardized folder hierarchy based on division, reporting period, and document category.
-
-<p align="center">
-<img src="assets/drive-structure.png" width="100%">
-</p>
-
----
-
-## ⚙️ Workflow Automation
-
-Google Apps Script orchestrates the complete reporting workflow, including:
-
-- duplicate submission prevention,
-- dynamic header mapping,
-- calendar synchronization,
-- email notifications,
-- automated document organization.
-
-<p align="center">
-<img src="assets/workflow.png" width="100%">
-</p>
-
----
-
-# 📊 Dashboard Overview
-
-The processed reporting data is visualized through an interactive **Looker Studio** dashboard, allowing stakeholders to monitor reporting activities and organizational performance in a single view.
-
-Current dashboard includes monitoring for:
-
-- Report submissions
-- Reporting completion status
-- KPI progress
-- Division performance
-- Reporting trends
-- Issue monitoring
-
-> 🚧 Additional dashboards and reporting metrics are currently under development.
-
----
-
-# 🖼 Dashboard Preview
-
-<p align="center">
-<img src="assets/dashboard-preview.png" width="100%">
-</p>
+- Menstandarkan proses pelaporan kinerja organisasi.
+- Mengotomatisasi proses pengumpulan laporan melalui Google Forms.
+- Menyinkronkan agenda pelaporan secara otomatis ke Google Calendar.
+- Mengirim email konfirmasi kepada PIC setelah laporan berhasil dikirim.
+- Mengelola dokumen pendukung secara otomatis ke struktur folder Google Drive.
+- Menyediakan dashboard monitoring sebagai media pemantauan aktivitas pelaporan.
+- Mengurangi aktivitas administrasi yang bersifat repetitif melalui workflow automation.
 
 ---
 
@@ -136,12 +47,13 @@ Google Form
 Google Sheets
       │
       ▼
-Google Apps Script Automation
-      ├── Duplicate Prevention
+Google Apps Script
+      │
+      ├── Duplicate Submission Prevention
       ├── Dynamic Header Mapping
-      ├── Calendar Synchronization
-      ├── Email Notification
-      └── Google Drive Organization
+      ├── Google Calendar Synchronization
+      ├── Email Confirmation
+      └── Google Drive File Organization
       │
       ▼
 Reporting Dataset
@@ -149,6 +61,93 @@ Reporting Dataset
       ▼
 Looker Studio Dashboard
 ```
+
+---
+
+# ✨ System Features
+
+## 📝 Standardized Reporting Form
+
+Seluruh laporan dikumpulkan melalui Google Forms yang telah dirancang agar proses pelaporan menjadi lebih terstruktur dan konsisten.
+
+<p align="center">
+<img src="assets/google-form.png" width="100%">
+</p>
+
+---
+
+## 📅 Automatic Google Calendar Integration
+
+Apabila laporan berisi agenda atau kegiatan tertentu, sistem secara otomatis membuat event pada Google Calendar lengkap dengan informasi pendukung.
+
+<p align="center">
+<img src="assets/calendar-preview.png" width="100%">
+</p>
+
+---
+
+## 📧 Automated Email Confirmation
+
+Setiap laporan yang berhasil diproses akan secara otomatis mengirimkan email konfirmasi kepada PIC sebagai bukti bahwa laporan telah diterima sistem.
+
+<p align="center">
+<img src="assets/email-confirmation.png" width="100%">
+</p>
+
+---
+
+## 📂 Automated Drive Organization
+
+Seluruh file yang diunggah akan dipindahkan secara otomatis ke dalam struktur folder Google Drive berdasarkan divisi, jenis pelaporan, dan kategori dokumen.
+
+Selain itu, sistem juga melakukan penamaan file secara otomatis agar lebih konsisten dan mudah ditelusuri.
+
+<p align="center">
+<img src="assets/drive-structure.png" width="100%">
+</p>
+
+---
+
+## ⚙️ Workflow Automation
+
+Seluruh proses automasi dijalankan menggunakan Google Apps Script, mulai dari validasi data hingga proses integrasi antar layanan Google Workspace.
+
+Fitur utama meliputi:
+
+- Duplicate Submission Prevention
+- Dynamic Header Mapping
+- Google Calendar Integration
+- Email Confirmation
+- Google Drive Automation
+
+<p align="center">
+<img src="assets/workflow.png" width="100%">
+</p>
+
+---
+
+# 📊 Dashboard Overview
+
+Data hasil pelaporan kemudian divisualisasikan menggunakan **Looker Studio** sehingga aktivitas pelaporan dapat dipantau secara lebih mudah oleh stakeholder.
+
+Dashboard saat ini menampilkan berbagai informasi utama, antara lain:
+
+- Monitoring jumlah laporan
+- Status penyelesaian laporan
+- Progress KPI
+- Monitoring performa divisi
+- Tren pelaporan
+- Monitoring issue
+
+> 🚧 Dashboard masih terus dikembangkan dengan penambahan visualisasi dan metrik monitoring yang lebih detail.
+
+---
+
+# 🖼 Dashboard Preview
+
+<p align="center">
+<img src="assets/dashboard-preview.png" width="100%">
+</p>
 
 ---
 
@@ -167,6 +166,7 @@ Looker Studio Dashboard
 │
 ├── data/
 │   ├── dummy/
+│   │   └── performance-reporting-dummy-data.xlsx
 │   └── README.md
 │
 ├── presentation/
@@ -197,12 +197,12 @@ Looker Studio Dashboard
 
 # 💼 Skills Demonstrated
 
-### ⚙️ Automation
+### ⚙️ Workflow Automation
 
-- Workflow Automation
 - Google Apps Script
-- Process Automation
+- Workflow Automation
 - Trigger-based Automation
+- Process Automation
 
 ### 📊 Data Management
 
@@ -213,9 +213,9 @@ Looker Studio Dashboard
 
 ### 📈 Business Intelligence
 
-- Performance Monitoring
-- KPI Reporting
 - Dashboard Development
+- KPI Monitoring
+- Performance Reporting
 - Data Visualization
 
 ### 🏢 Business Process
@@ -229,23 +229,23 @@ Looker Studio Dashboard
 
 # 🔒 Data Privacy
 
-The original system was developed using internal operational data during an internship project.
+Project asli dikembangkan menggunakan data operasional internal selama pelaksanaan internship.
 
-To protect organizational confidentiality, this repository contains:
+Untuk menjaga kerahasiaan informasi perusahaan, repository ini hanya menyertakan:
 
-- anonymized dummy datasets,
-- recreated dashboard examples,
-- sanitized automation configuration,
-- public-safe documentation.
+- dummy dataset,
+- dashboard dengan data simulasi,
+- konfigurasi automasi yang telah disesuaikan,
+- dokumentasi yang aman untuk dipublikasikan.
 
-No confidential organizational data is included in this repository.
+Tidak ada data internal perusahaan yang disertakan dalam repository ini.
 
 ---
 
 # 🚀 Conclusion
 
-This project demonstrates how a manual organizational reporting process can be transformed into an integrated automation system using the Google Workspace ecosystem.
+Project ini menunjukkan bagaimana proses pelaporan organisasi yang sebelumnya melibatkan banyak aktivitas manual dapat diotomatisasi menjadi sebuah workflow yang terintegrasi menggunakan ekosistem Google Workspace.
 
-By combining workflow automation, document management, reporting pipelines, and dashboard visualization, the system reduces repetitive administrative work while providing better visibility into organizational reporting performance.
+Melalui integrasi Google Forms, Google Apps Script, Google Drive, Google Calendar, Gmail, Google Sheets, dan Looker Studio, sistem mampu membantu menstandarkan proses pelaporan, mengurangi pekerjaan administrasi yang berulang, serta menyediakan dashboard monitoring yang lebih mudah digunakan oleh stakeholder.
 
-The project is actively being expanded with additional dashboards and monitoring capabilities to support more comprehensive performance analysis.
+Seiring dengan pengembangan yang masih berlangsung, sistem ini akan terus disempurnakan melalui penambahan dashboard, metrik monitoring, serta fitur analitik yang lebih komprehensif.
